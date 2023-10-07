@@ -1,0 +1,9 @@
+EJS - Template Engin
+HTML
+SASS
+Tailwind
+
+Node.js
+Express.js
+MongoDB
+Web Sockets.io
