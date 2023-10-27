@@ -65,3 +65,6 @@ nav li:last-child a:hover {
     -o-transform: perspective(500px) rotateY(-42deg);
   }
 }
+section.cart {
+  background-color: #F8F8F8;
+}

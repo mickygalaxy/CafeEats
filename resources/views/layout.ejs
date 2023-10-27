@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100&family=Poppins:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="shortcut icon" href="favicon.ico" type="favicon.ico">
+    <title>CafeEats</title>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-gray-200 py-4 circle z-50">
+        <div class="container mx-auto flex items-center justify-between">
+            <!--- Logo and Brand -->
+            <div class="flex items-center ml-6 animation-effect">              
+                <span class="h-16 ml-10 sm:ml-5"><img src="/img/lg.png" alt="Logo" class="h-16 w-auto mt-0 sm:h-6,w-auto" id="logo"></span>
+                <span class="ml-6"><a href="http://localhost:3000/" class="text-black text-4xl font-black tracking-wide font-serif">CafeEats</a></span>
+            </div> 
+
+            <!-- Navigation Links (Hidden on Mobile) -->
+            <ul class="hidden md:flex space-x-4 text-2xl font-bold mr-12">
+                <li class="pt-1 box_hover cursor-pointer"><a href="#" class="text-gray-700 gap-2">Menu</a></li>
+                <li class="pt-1 box_hover cursor-pointer"><a href="/notification" class="text-gray-700 gap-2">Notification</a></li>
+                <li class="pt-1 box_hover cursor-pointer"><a href="#" class="text-gray-700 gap-2">Offers</a></li>
+                <li class="pt-1 box_hover cursor-pointer"><a href="register" class="text-gray-700 gap-2">Register</a></li>
+                <li class="pt-1 box_hover cursor-pointer"><a href="/login" class="text-gray-700 gap-2">Login</a></li>
+                <li class="box_hover cursor-pointer"><a href="/cart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10  hover:fill-curren hover:text-orange-400  active:bg-black focus:outline-none focus:ring focus:ring-violet-300 "><path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" /></svg></a></li></ul>
+            <!-- Mobile Menu Button (Visible on Mobile) -->
+            <button id="mobile-menu-button" class="md:hidden text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile Menu (Initially Hidden) -->
+<div id="mobile-menu" class="hidden md:hidden bg-gray-500 py-2 font-semibold border-y-2 border-slate-30 rounded-lg">
+    <ul class="flex flex-col space-y-2 text-center">
+        <li class="border-b-4"><a href="register" class="text-white">Register</a></li>
+        <li class="border-b-4"><a href="/login" class="text-white ">Login</a></li>
+        <li class="border-b-4"><a href="#" class="text-white ">Menu</a></li>
+        <li class="border-b-4"><a href="/notification" class="text-white ">Notification</a></li>
+        <li class="border-b-4"><a href="#" class="text-white ">Offers</a></li>
+        <li class="flex justify-center items-center"><a href="/cart"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10  text-white fill-current  "><path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" /> </svg></a></li></ul>
+    </ul>
+</div>  
+
+<%- body -%>
+<script src="/js/app.js"></script>
+</body>
+</html>
