@@ -4,8 +4,11 @@ This repository contains the source code and documentation for the CaféEats pro
 
 Key Features:
 Pickup Time Scheduling: Users can choose a specific pickup time for their orders, minimizing wait times and enhancing convenience.
+
 Digital Wallet Integration: A secure digital wallet system allows users to store coins for quick and seamless transactions.
+
 Real-time Notifications: Leveraging Socket.IO for instant communication, users receive real-time notifications about their orders.
+
 Responsive Design: Built with HTML, Tailwind CSS, and EJS, CaféEats offers a responsive and visually appealing user interface.
 
 Technologies Used:
