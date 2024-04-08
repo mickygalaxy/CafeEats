@@ -1,0 +1,68 @@
+[
+    
+    {
+        "name": "ADRAK",
+        "image": "chai.jpg",
+        "price":"₹15"
+    },
+    {
+        "name": "chocolate",
+        "image": "chocolate tea.jpg",
+        "price":"₹15"
+    }, 
+    {
+        "name": "ELAICHI",
+        "image": "ELAICHI tea.jpg",
+        "price":"₹20"
+    },
+    {
+        "name": "MASALA",
+        "image": "chai.jpg",
+        "price":"₹20"
+    },
+    {
+        "name": "KESAR",
+        "image": "kesar tea.jpg",
+        "price":"₹25"
+    },
+    {
+        "name": "rOSE",
+        "image": "rose tea.jpg",
+        "price":"₹25"
+    },
+    {
+        "name": "BUTTERSCOTCH",
+        "image": "butter.jpg",
+        "price":"₹25"
+    },
+    {
+        "name": "EXTRA LARGE",
+        "image": "chai.jpg",
+        "price":"₹40"
+    },
+    {
+        "name": "HOT COFFEE",
+        "image": "coffee.jpg",
+        "price":"₹20"
+    },
+    {
+        "name": "STRONG COFFEE",
+        "image": "strong coffee.jpg",
+        "price":"₹25"
+    },
+    {
+        "name": "CHOCOLATE COFFEE",
+        "image": "chocolate hot coffee.jpg",
+        "price":"₹30"
+    },
+    {
+        "name": "BLACK COFFEE",
+        "image": "black coffee.jpg",
+        "price":"₹35"
+    },
+    {
+        "name": "EXTRA LARGE COFFEE",
+        "image": "coffee.jpg",
+        "price":"₹50"
+    }
+]

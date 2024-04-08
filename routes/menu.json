@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Chai",
+        "image": "chai.jpg",
+        "price":"₹15"
+    },
+    {
+        "name": "Cold Coffee",
+        "image": "2_cold coffee.avif",
+        "price":"₹60"
+    },
+    {
+        "name": "Oreo Shake",
+        "image": "3_oreo shake.avif",
+        "price":"₹90"
+    },
+    {
+        "name": "Plain Samosa",
+        "image": "4_Plain Samosa.avif",
+        "price":"₹15"
+    },
+    {
+        "name": "Kachori",
+        "image": "5_kachori.jpg",
+        "price":"₹15"
+    },
+    {
+        "name": "Veg Masala Maggi",
+        "image": "6_Veg Masala Maggi.avif",
+        "price":"₹40"
+    },
+    {
+        "name": "Veg Fried Rice",
+        "image": "7_veg fried rice.avif",
+        "price":"₹50"
+    },
+    {
+        "name": "Veg Cheese Corn Maggi",
+        "image": "8_Veg cheese corn maggi.avif",
+        "price":"₹90"
+    },
+    {
+        "name": "Pizza Cheese Sandwich",
+        "image": "9_Pizza Cheese Sandwich.avif",
+        "price":"₹110"
+    },
+    {
+        "name": "Mango Shake",
+        "image": "10_Mango shake.avif",
+        "price":"₹40"
+    },
+    {
+        "name": "Masala Fries",
+        "image": "11_Masala Fries.avif",
+        "price":"₹60"
+    },
+    {
+        "name": "Butter Garlic Bread",
+        "image": "12_butter garlic bread.avif",
+        "price":"₹55"
+    },
+    {
+        "name": "Burger",
+        "image": "13_burder.avif",
+        "price":"₹60"
+    },
+    {
+        "name": "Veg-Pizza",
+        "image": "14_veg pizza.avif",
+        "price":"₹90"
+    },
+    {
+        "name": "Vegetable and Paneer Momo",
+        "image": "15_vegetable and paneer momo.avif",
+        "price":"₹100"
+    }
+    
+]

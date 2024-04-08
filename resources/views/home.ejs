@@ -50,9 +50,56 @@
     <!-- </ul> -->
 <!-- </div>      -->
 
-<main class=" container flex flex-wrap justify-around pt-6 hero">
+
+
+<main class=" container flex flex-wrap  justify-center pt-6 hero]  sm:mx-16 w-auto ">
+
+  <% menuItems.forEach(function(menuItem) { %>
+    <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
+      <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
+        <img class="object-coverd rounded-r-xl w-60" src="/img/<%=menuItem.image%>" alt="product image" /> </a>
+      <div class="mt-4 px-5 pb-5">
+        <a href="#">
+          <h5 class="text-xl tracking-tight text-slate-900 font-extrabold text-center"><%=menuItem.name%></h5>
+        </a>
+        <div class="mt-2 mb-5 flex items-center justify-between gap-2">
+          <p>
+            <span class="text-2xl font-bold text-slate-900 text-center">₹<%=menuItem.price%></span>
+          </p>
+          <div class="flex items-center">
+            <svg aria-hidden="true" class="h-2 w-2 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+            <svg aria-hidden="true" class="h-3 w-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+            <svg aria-hidden="true" class="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+            <svg aria-hidden="true" class="h-6 w-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+            <span class="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">5.0</span>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+        <button data-item = "<%= JSON.stringify(menuItem) %>" class="add-to-cart flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-orange-500 focus:outline-none focus:ring-4 focus:ring-blue-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          Add to cart</button
+        ></div>
+      </div>
+    </div>
+    
+  <% })%>
+
+
   <!--    tea  -->
-    <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+    <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl w-60" src="img/chai.jpg" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -89,10 +136,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
+
 
        <!-- cold coffee -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="/img/2_cold coffee.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -129,11 +177,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
       <!-- oreo shake -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="/img/3_oreo shake.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -170,12 +218,12 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
 
       <!-- Plain Samosa -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/4_Plain Samosa.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -212,12 +260,12 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
 
      <!-- Kachori -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/5_kachori.jpg" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -254,11 +302,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
       <!-- Veg Masala Maggi -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/6_Veg Masala Maggi.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -295,10 +343,10 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
       <!-- Veg fried rice -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/7_veg fried rice.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -335,11 +383,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
       <!-- Veg cheese corn maggi -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/8_Veg cheese corn maggi.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -376,11 +424,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
       <!-- Pizza cheese sandwich -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/9_Pizza Cheese Sandwich.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -417,11 +465,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
       <!-- Mango shake -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/10_Mango shake.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -458,11 +506,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
       <!-- Masala Fries -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/11_Masala Fries.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -499,11 +547,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
       <!-- Butter garlic bread -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/12_butter garlic bread.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -540,11 +588,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
       <!-- burger -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/13_burder.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -581,11 +629,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
      
        <!-- veg pizza -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/14_veg pizza.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -622,11 +670,11 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 
        <!-- vegetable and paneer momo -->
-      <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+      <!-- <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md  items-center hover:border-4 hover:border-gray-400 hover:shadow-gray-400 opacity-100 drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:border-dashed">
         <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
           <img class="object-coverd rounded-r-xl" src="img/15_vegetable and paneer momo.avif" alt="product image" /> </a>
         <div class="mt-4 px-5 pb-5">
@@ -663,7 +711,7 @@
             Add to cart</a
           >
         </div>
-      </div>
+      </div> -->
 
 </main>
 

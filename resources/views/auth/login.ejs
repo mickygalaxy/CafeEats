@@ -1,21 +1,32 @@
 <section class="h-screen login">
-    <div class="container h-full px-6 py-24">
+    <div class="container h-full px-6 py-24 m-auto">
       <div
         class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
         <!-- Left column container with background-->
-        <div class="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
+        <div class="mb-12 md:mb-0 md:w-8/12 lg:w-6/12 z-50 ">
+          <div class="animation-rotate ml-36 lg:ml-48 "><div class="w-16 h-16 rounded-full bg-orange-400   shadow-lg shadow-orange-600"><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/ok.png" class="animation-bouncing"/></div></div>
+          <div class="animate-bounce pl-72 lg:pl-80"><div class="w-16 h-16 rounded-full bg-gray-500  shadow-lg shadow-gray-600"><img width="188" height="188" src="https://img.icons8.com/3d-fluency/188/unlock--v2.png" alt="unlock--v2" class="animation-bouncing"/></div></div>
+          <div class="ml-10 lg:pl-26 animate-bounce"><div class="w-16 h-16 rounded-full bg-yellow-300 shadow-lg shadow-yellow-600"><img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-password-cyber-security-flaticons-lineal-color-flat-icons-3.png" alt="external-password-cyber-security-flaticons-lineal-color-flat-icons-3" class="animation-bouncing"/></div></div>
+          <div class=" animate-bounce ml-32 lg:pl-20 pt-10"><div class="w-16 h-16 rounded-full bg-green-400 -rotate-45 shadow-lg shadow-green-600"><img width="64" height="64" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-email-contact-us-flatart-icons-lineal-color-flatarticons-1.png" alt="external-email-contact-us-flatart-icons-lineal-color-flatarticons-1" class="animation-bouncing"/></div></div>
+          <div class="animate-bounce  pl-80"><div class="w-16 h-16 rounded-full -rotate-12 bg-cyan-400 shadow-lg shadow-cyan-600"><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/user-credentials.png" alt="user-credentials" class="animation-bouncing"/></div></div>
+          <div class="animate-bounce pl-8"><div class="w-16 h-16 rounded-full bg-purple-600 -rotate-12 shadow-lg shadow-purple-600"><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/businesswoman--v3.png" alt="businesswoman--v3" class="animation-bouncing"/></div></div>
           <img
             src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-            class="w-full"
+            class="w-full -mt-80"
             alt="Phone image" />
         </div>
-  
         <!-- Right column container with form -->
         <div class="md:w-8/12 lg:ml-6 lg:w-5/12">
-          <form>
+          <form action="/login" method="POST">
+
+            <div>
+            <% if(messages.error){ %>
+              <span class="text-red-300 text-center flex justify-center font-bold ">👉 <%= messages.error  %> 👈</span>
+           <% }%>
+            </div>
             <!-- Email input -->
             <div class="relative mb-6" data-te-input-wrapper-init>
-              <input
+              <input name = "email"
                 type="text"
                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="email1"
@@ -29,7 +40,7 @@
   
             <!-- Password input -->
             <div class="relative mb-6" data-te-input-wrapper-init>
-              <input
+              <input name="password"
                 type="password"
                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-400 dark:placeholder:text-neutral-400 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="password1"

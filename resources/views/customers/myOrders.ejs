@@ -1,0 +1,35 @@
+<!-- Display order history as cards on small devices -->
+<div class="text-orange-500  flex text-center justify-center items-center text-3xl sm:text-5xl	 font-extrabold h-16"><h2>↜Order Bills↝</h2></div>
+<div class=" bg-gray-700 w-full p-1 flex items-center justify-center h-auto flex-1 border-white border-doubble border-4 rounded-2xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 text-center place-items-center border-white border-doubble border-4 rounded-2xl">
+        <!-- Loop through each order and display information in a card -->
+         <!-- orders.forEach(order => ) -->
+         <% const sortedOrders = orders.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); %>
+        <% sortedOrders.forEach(order => { %>
+            <!-- <div class="bg-white border-gray-200 text-center m-2 rounded-2xl shadow-2xl overflow-hidden border-spacing-y-0.5"> -->
+                <div class="<%= isPastOrder(order.createdAt) ? 'bg-blue-200 text-gray-500' : 'bg-green-200 text-gray-500' %> font-semibold  text-center m-2 rounded-2xl shadow-2xl overflow-hidden border-white border-x-4 border-dashed drop-shadow-[0_35px_35px_rgba(255,255,255,0.50)]">
+                <div class="p-4">
+                    <p class="text-gray-500 font-extrabold border-white border-y-4 rounded-xl gap-1">-:Order ID🆔:- <%= order._id %></p>
+                    <div class="border-white border-dash border-y-4 rounded-xl gap-1">
+                        <p class="text-gray-500 font-extrabold">👉 Items🍕 👈
+                        <ul>
+                            <% for(let product of Object.values(order.items)){ %>
+                                <li><%= product.item.name %> - <%= product.qty %> - ₹<%= product.item.price * product.qty %></li>
+                            <% }; %>
+                        </ul>
+                    </p>
+                    </div>
+                   
+                    <p class="text-gray-500 font-extrabold border-white border-y-4 rounded-xl  gap-1">Total Price💰: ₹<%= order.totalPrice %></p>
+                    <p class="text-gray-500 font-extrabold border-white border-y-4 rounded-xl gap-1">Pickup Time⏰: <%= order.pickup_time %></p>
+                    <p class="text-gray-500 font-extrabold border-white border-y-4 rounded-xl gap-1">Date📅: <%= order.createdAt.toDateString() %></p>
+                    <p class="text-gray-500 font-extrabold border-white border-y-4 rounded-xl gap-1">Time⏳: <%= order.createdAt.toLocaleTimeString() %></p>
+                    <p class="text-gray-500 font-extrabold border-white border-y-4 rounded-xl gap-1">Status✅: <%= order.status %></p>
+                    <!-- Add a button or link to show bill details -->
+                </div>
+            </div>
+        <% }); %>
+    </div>
+   
+
+</div>

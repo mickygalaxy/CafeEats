@@ -1,5 +1,7 @@
-<section class="cart py-6 sm:py-16">
-<!-- <div class="empty-cart py-16">
+<section class="cart py-6 sm:py-16">   
+
+<% if (!(session.cart && session.cart.items)) { %>
+<div class="empty-cart py-16">
     <div class="container mx-auto text-center">
          <h1 class="text-3xl font-bold mb-2">Cart Empty 🫤</h1>
          <p class="text-gray-500 text-lg mb-12">You probably haven't ordered a any product yet.<br>
@@ -8,89 +10,81 @@
          <img src="/img/empty-cart.png" class="w-2/6 mx-auto">
          <a href="/" class="inline-block px-6 py-2 rounded-full text-white bg-black font-bold mt-12 border-gray-600 border-4">Go back</a>
         </div>
-      </div> -->
-
-      <div class="order container mx-auto sm:w-3/4 lg:w-1/2">
+      </div>
+<%}
+else{%>
+  
+      <div class="order container mx-auto sm:w-3/4 lg:w-1/2 border-dashed border-4 border-gray-400 p-4 rounded-2xl">
           <div class="flex items-center border-b border-gray-300 pb-2 sm:pb-4">
              <img src="/img/cart-black.png" alt="" class="w-8 sm:w-12">
              <h1 class="font-bold ml-2 sm:ml-4 text-xl sm:text-2xl">Order Summary</h1>
           </div>
+
+          
           <div class="order-list">
-   <!-- ----------------------------------------------------------------------------------------------------------------------- -->
-              <div class="flex flex-col sm:flex-row items-center my-4 sm:my-8">
-                  <img class= "w-20 rounded-lg"  src ="img/chai.jpg" alt="">
+
+            <% for(let product of Object.values(session.cart.items)){ %>
+
+
+               <div class="flex flex-col sm:flex-row items-center my-4 sm:my-8    border-dotted border-8 border-gray-400 p-4 rounded-2xl hover:-rotate-2">
+                  <img class= "w-20 rounded-lg"  src ="img/<%=product.item.image%>" alt="">
                   <div class="text-sm mt-2 sm:ml-4 flex-1">
-                     <h1 class="text-lg pl-2 sm:text-xl"> Chai</h1>
+                     <h1 class="text-lg pl-2 sm:text-xl"><%=product.item.name%></h1>
                      <span class="text-gray-500">MEDIUM</span>
                   </div>
-         
+                  <div class="mx-8 flrx-1 border-4 border-dashed border-gray-200 rounded-xl p-2 hover:bg-black hover:-rotate-3">
+                     <button type="button" class=" text-gray-600  font-bold  hover:text-white remove-button">Remove</button>
+                   </div> 
                   <div class=" flex-1 mt-4 sm:mt-0">
                       <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l h-4 items-center pb-4"><img src="img/minus.png" class="h-2"></button>
-                      <span class="px-2 font-bold text-gray-500">1</span>
+                      <span class="px-2 font-bold text-gray-500"><%=product.qty%></span>
                       <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r h-4 items-center pb-4"><img src="img/plus.png" class="h-2" alt=""></button>
+                      
                    </div>
-                  
-                  <span class="font-bold text-base mt-4 sm:text-lg  ">₹15</span>
-              </div>
-<!-- ------------------------------------------------------------------------------------------------------------------------ -->
-
-              <div class="flex flex-col sm:flex-row items-center my-4 sm:my-8">
-               <img class= "w-20 rounded-lg"  src ="img/chai.jpg" alt="">
-               <div class="text-sm mt-2 sm:ml-4 flex-1">
-                  <h1 class="text-lg pl-2 sm:text-xl"> Chai</h1>
-                  <span class="text-gray-500">MEDIUM</span>
-               </div>
-      
-               <div class=" flex-1 mt-4 sm:mt-0">
-                   <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l h-4 items-center pb-4"><img src="img/minus.png" class="h-2"></button>
-                   <span class="px-2 font-bold text-gray-500">1</span>
-                   <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r h-4 items-center pb-4"><img src="img/plus.png" class="h-2" alt=""></button>
-                </div>
-               
-               <span class="font-bold text-base mt-4 sm:text-lg  ">₹15</span>
-           </div>
-
-<!-- --------------------------------------------------------------------------------------------------- -->
-           <div class="flex flex-col sm:flex-row items-center my-4 sm:my-8">
-            <img class= "w-20 rounded-lg"  src ="img/chai.jpg" alt="">
-            <div class="text-sm mt-2 sm:ml-4 flex-1">
-               <h1 class="text-lg pl-2 sm:text-xl"> Chai</h1>
-               <span class="text-gray-500">MEDIUM</span>
-            </div>
-   
-            <div class=" flex-1 mt-4 sm:mt-0">
-                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l h-4 items-center pb-4"><img src="img/minus.png" class="h-2"></button>
-                <span class="px-2 font-bold text-gray-500">1</span>
-                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r h-4 items-center pb-4"><img src="img/plus.png" class="h-2" alt=""></button>
-             </div>
             
-            <span class="font-bold text-base mt-4 sm:text-lg  ">₹15</span>
-           </div>
+                  <span class="font-bold text-base mt-4 sm:mt-1 sm:text-lg  ">₹<%=product.item.price * product.qty%></span>
+              </div>
+
+            <%}%>
+
+            <%session.cart.items%>
          </div>
-<!---------------------------------------------------------------------------------------------------------  -->
        <hr>
 
          <div class="text-center py-4 sm:text-right">
             <div>
                <span class="text-lg font-bold">Total Amount:</span>
-               <span class="text-orange-400 text-2xl font-bold ml-2">₹45</span>
+               <span class="text-orange-400 text-2xl font-bold ml-2">₹<%=session.cart.totalPrice%></span>
             </div>
+
+         <form action="/orders" method="POST">
            <div class="py-4 flex items-center justify-center sm:justify-center">
              <div class="text-center sm:text-right">
-                <label for="pickup-time" class="text-lg font-bold mr-2">Pickup Time:</label>
+                <label for="pickup_time" class="text-lg font-bold mr-2">Pickup Time:</label>
              </div>
-             <input type="time" id="pickup-time" name="pickup-time" class="border border-gray-300 p-2 rounded-lg text-sm   hover:bg-gray-100 text-gray-500 sm:text-base" />
+             <input type="time" id="pickup-time" name="pickup_time" class="border border-gray-300 p-2 rounded-lg text-sm   hover:bg-gray-100 text-gray-500 sm:text-base" />
            </div>
-           <div class="flex justify-center"> 
-             <button class="bg-orange-400 hover:bg-black text-white font-bold py-2 px-4 rounded-lg  mt-4 sm:mt-0  border-2 border-gray-500">
+           <div class="flex justify-center hover:-rotate-6"> 
+            <% if(user){ %>
+             <button type="submit" class="bg-orange-400 hover:bg-black text-white font-bold py-2 px-4 rounded-lg  mt-4 sm:mt-0  border-2 border-gray-500" id="order-placed">
              Order Now
              </button>
-             <!-- <button class="bg-orange-400 hover:bg-black text-white font-bold py-2 px-4 rounded-lg  mt-4 sm:mt-0  border-2 border-gray-500">
-               Login to continue
-             </button> -->
+         </form>    
+             
+             <% } else { %>
+             <button class="bg-orange-400 hover:bg-black text-white font-bold py-2 px-4 rounded-lg  mt-4 sm:mt-0  border-2 border-gray-500">
+               <a href="/login"> Login to continue</a> 
+             </button> <%}%>
            </div>
+
          </div>
+
+
       </div>
+         
+
+      <%}%>
+
 </section>
 
 

@@ -1,0 +1,152 @@
+[
+    {
+        "name": "MASALA SANDWICH",
+        "image": "MASALA SANDWICH.jpg",
+        "price":"₹79"
+    },
+    {
+        "name": "CHEESE CHUTNEY SANDWICH",
+        "image": "CHEESE CHUTNEY SANDWICH.jpg",
+        "price":"₹89"
+    },
+    {
+        "name": "PANEER TAKATAK SANDWICH",
+        "image": "PANEER TAKATAK SANDWICH.jpg",
+        "price":"₹89"
+    },
+    {
+        "name": "CORN CHEESE SANDWICH",
+        "image": "CORN CHEESE SANDWICH.jpg",
+        "price":"₹89"
+    },
+    {
+        "name": "PIZZA SANDWICH",
+        "image": "PIZZA SANDWICH.jpg",
+        "price":"₹99"
+    },
+    {
+        "name": "VEG CHEESE CLUB",
+        "image": "VEG CHEESE CLUB.jpg",
+        "price":"₹129"
+    },
+    {
+        "name": "INDORI CLUB",
+        "image": "INDORI CLUB.jpg",
+        "price":"₹139"
+    },
+    {
+        "name": "PIZZA CLUB",
+        "image": "PIZZA CLUB.jpg",
+        "price":"₹159"
+    },
+    {
+        "name": "VEG MOMO",
+        "image": "VEG MOMO.jpg",
+        "price":"₹69"
+    },
+    {
+        "name": "PANEER MOMO",
+        "image": "PANEER MOMO.jpg",
+        "price":"₹89"
+    },
+    {
+        "name": "CHEESE MOMO",
+        "image": "CHEESE MOMO.jpg",
+        "price":"₹89"
+    },
+    {
+        "name": "VEG BURGER",
+        "image": "VEG BURGER.jpg",
+        "price":"₹69"
+    },
+    {
+        "name": "VEG CHEESE BURGER",
+        "image": "VEG CHEESE BURGER.jpg",
+        "price":"₹79"
+    },
+    {
+        "name": "PANEER CHEESE BURGER",
+        "image": "PANEER CHEESE BURGER.jpg",
+        "price":"₹89"
+    },
+    {
+        "name": "MARGHERITA PIZZA",
+        "image": "MARGHERITA PIZZA.jpg",
+        "price":"₹99"
+    },
+    {
+        "name": "VEGETABLE(COT) PIZZA",
+        "image": "VEGETABLE(COT) PIZZA.jpg",
+        "price":"₹119"
+    },
+    {
+        "name": "CHEESE CORN PIZZA",
+        "image": "CHEESE CORN PIZZA.jpg",
+        "price":"₹119"
+    },
+    {
+        "name": "PANEER WRAPPED PIZZA",
+        "image": "PANEER WRAPPED PIZZA.jpg",
+        "price":"₹129"
+    },
+    {
+        "name": "FARMHOUSE",
+        "image": "FARMHOUSE.jpg",
+        "price":"₹149"
+    },
+    {
+        "name": "INDORI BHEL",
+        "image": "INDORI BHEL.jpg",
+        "price":"₹59"
+    },
+    {
+        "name": "CORN BHEL",
+        "image": "CORN BHEL.jpg",
+        "price":"₹69"
+    },
+    {
+        "name": "CORN CHAT",
+        "image": "CORN CHAT.jpg",
+        "price":"₹79"
+    },
+    {
+        "name": "RED SAUCE PASTA",
+        "image": "RED SAUCE PASTA.jpg",
+        "price":"₹119"
+    },
+    {
+        "name": "WHITE SAUCE PASTA",
+        "image": "WHITE SAUCE PASTA.jpg",
+        "price":"₹139"
+    },
+    {
+        "name": "CLASSIC MAGGIE",
+        "image": "CLASSIC MAGGIE.jpg",
+        "price":"₹59"
+    },
+    {
+        "name": "VEGETABLE MAGGIE",
+        "image": "VEGETABLE MAGGIE.jpg",
+        "price":"₹79"
+    },
+    {
+        "name": "CORN CHEESE MAGGIE",
+        "image": "CORN CHEESE MAGGIE.jpg",
+        "price":"₹89"
+    },
+    {
+        "name": "FRENCH FRIES",
+        "image": "FRENCH FRIES.jpg",
+        "price":"₹69"
+    },
+    {
+        "name": "MASALA FRIES",
+        "image": "MASALA FRIES.jpg",
+        "price":"₹89"
+    },
+    {
+        "name": "PERI PERI FRIES",
+        "image": "PERI PERI FRIES.jpg",
+        "price":"₹89"
+    }
+]

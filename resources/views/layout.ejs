@@ -12,28 +12,60 @@
     <title>CafeEats</title>
 </head>
 <body class="bg-gray-100">
-    <nav class="bg-gray-200 py-4 circle z-50">
-        <div class="container mx-auto flex items-center justify-between">
+    <nav class="bg-gray-200 py-4 circle z-50 "> 
+        <div class="container mx-auto flex items-center justify-between ">
             <!--- Logo and Brand -->
             <div class="flex items-center ml-6 animation-effect">              
                 <span class="h-16 ml-10 sm:ml-5"><img src="/img/lg.png" alt="Logo" class="h-16 w-auto mt-0 sm:h-6,w-auto" id="logo"></span>
-                <span class="ml-6"><a href="http://localhost:3000/" class="text-black text-4xl font-black tracking-wide font-serif">CafeEats</a></span>
+                <span class="ml-6"><a href="http://localhost:3000/" class="text-black text-4xl font-black tracking-wide">CafeEats</a></span>
+                <!-- <span class="ml-6"><a href="http://localhost:3000/" class="text-black text-3xl font-black tracking-wide  cafeEats">𝓒𝓪𝓯𝓮𝓔𝓪𝓽𝓼</a></span> -->
+
             </div> 
 
             <!-- Navigation Links (Hidden on Mobile) -->
-            <ul class="hidden md:flex space-x-4 text-2xl font-bold mr-12">
-                <li class="pt-1 box_hover cursor-pointer"><a href="#" class="text-gray-700 gap-2">Menu</a></li>
+            <ul class="hidden md:flex space-x-4 text-xl font-bold mr-12">
+                <li class="pt-1 box_hover cursor-pointer"><a href="/menu" class="text-gray-700 gap-2">Menu</a></li>
                 <li class="pt-1 box_hover cursor-pointer"><a href="/notification" class="text-gray-700 gap-2">Notification</a></li>
-                <li class="pt-1 box_hover cursor-pointer"><a href="#" class="text-gray-700 gap-2">Offers</a></li>
+                <li class="pt-1 box_hover cursor-pointer"><a href="offers" class="text-gray-700 gap-2">Offers</a></li>
+              <!-- user profile -->
+              <% if(user){ %>
+                <li class="pt-1 box_hover cursor-pointer list-none"><div class="relative gap-2">
+                    <button id="profileButton" class="flex items-center space-x-2 text-gray-700 focus:outline-none">
+                        <img src="img\food-avtar.jpg" alt="User Avatar" class="w-auto h-auto sm:w-8 sm:h-8 rounded-full">
+                        
+                    </button> 
+            
+                    <!-- Dropdown Menu -->
+                    <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                        <h3 class="block px-4 py-2 text-red-600 hover:bg-gray-100 text-center"><%= user.name %></h3>
+                        <hr class="my-1 border-t border-gray-200">
+                        <div class="flex justify-center items-center"><span class="block  py-2 text-gray-800 hover:bg-gray-100"><img src="img\purse.png" class="w-8 h-8"></span><span class="text-gray-500 font-extrabold text-3xl ml-2"><%= user.Wallet%></span></div>
+                        <hr class="my-1 border-t border-gray-200">
+                         <div>
+                            <form id="logout" action="/logout" method="POST">
+                                <a onclick="document.getElementById('logout').submit()" class="block px-4 py-2 text-red-600 hover:bg-gray-100 text-center" href="#">Logout</a>
+                            </form>
+                         </div>
+                    </div>
+                </div></li> 
+                <% } else { %>
                 <li class="pt-1 box_hover cursor-pointer"><a href="register" class="text-gray-700 gap-2">Register</a></li>
                 <li class="pt-1 box_hover cursor-pointer"><a href="/login" class="text-gray-700 gap-2">Login</a></li>
-                <li class="box_hover cursor-pointer"><a href="/cart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10  hover:fill-curren hover:text-orange-400  active:bg-black focus:outline-none focus:ring focus:ring-violet-300 "><path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" /></svg></a></li></ul>
-            <!-- Mobile Menu Button (Visible on Mobile) -->
+                <% }%>
+                
+
+               
+                <li class="box_hover cursor-pointer text-center flex items-center hover:bg-white hover:rounded-xl"><span id="cartCounter" class="text-blue-600 pl-2 pr-2 font-semibold "><%= session.cart?session.cart.totalQty:''%></span><a href="/cart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10  hover:fill-curren hover:text-orange-400  active:bg-black focus:outline-none focus:ring focus:ring-violet-300 hover:rounded-xl"><path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" /></svg></a></li></ul>
+           
+             <!-- Mobile Menu Button (Visible on Mobile) -->
             <button id="mobile-menu-button" class="md:hidden text-black">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
+
+           
+
         </div>
     </nav>
     <!-- Mobile Menu (Initially Hidden) -->
@@ -41,10 +73,10 @@
     <ul class="flex flex-col space-y-2 text-center">
         <li class="border-b-4"><a href="register" class="text-white">Register</a></li>
         <li class="border-b-4"><a href="/login" class="text-white ">Login</a></li>
-        <li class="border-b-4"><a href="#" class="text-white ">Menu</a></li>
+        <li class="border-b-4"><a href="/menu" class="text-white ">Menu</a></li>
         <li class="border-b-4"><a href="/notification" class="text-white ">Notification</a></li>
-        <li class="border-b-4"><a href="#" class="text-white ">Offers</a></li>
-        <li class="flex justify-center items-center"><a href="/cart"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10  text-white fill-current  "><path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" /> </svg></a></li></ul>
+        <li class="border-b-4"><a href="/offers" class="text-white ">Offers</a></li>
+        <li class="flex justify-center items-center"><span id="cartCounter" class="text-white pl-2 pr-2 font-extrabold "><%= session.cart?session.cart.totalQty:''%></span><a href="/cart"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10  text-white fill-current "><path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" /> </svg></a></li></ul>
     </ul>
 </div>  
 

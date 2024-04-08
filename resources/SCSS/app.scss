@@ -1,5 +1,9 @@
 @import './variables';
 @import './input';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;600;700;900&family=Pacifico&family=Poppins:wght@300;400;500;600;800&display=swap');
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
 body{
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -9,7 +13,8 @@ body{
 nav li:last-child a{
     &:hover{
         cursor: pointer;
-        background-color: rgb(97, 97, 97);
+        background-color: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(57,51,51,1) 100%);
+        border-radius: 15px 50px;
     }
 }
 
@@ -35,10 +40,12 @@ nav li:last-child a{
 
   .box_hover:hover {
     --s:10px;   /* the size of the image */
-    --b: 2px;     /* the border thickness*/
+    --b: 3px;     /* the border thickness*/
     --g: 5px;    /* the gap */
-    --c: #4ECDC4; /* the color */
-    outline: var(--b) solid var(--c);
+    // --c: #4ECDC4; /* the color */ 
+    --c:rgb(106, 106, 106);
+    // solid
+    outline: var(--b) dashed var(--c); 
     outline-offset: var(--g);
     border-radius: 1px;
     &:hover a{
@@ -85,3 +92,111 @@ nav li:last-child a{
   section.cart{
     background-color: $secondary;
   }
+
+
+  .emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.emoji {
+    font-size: 2rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s;
+    animation: bounce 2s infinite;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+    animation: none; /* Disable the animation on hover */
+}
+
+.animation-bouncing{
+  font-size: 2rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s;
+    animation: bounce 4s infinite; 
+}
+
+.animation-circular{
+  font-size: 2rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s;
+    animation: circular 2s infinite; 
+}
+
+.animation-rotate{
+  position:absolute;
+    transition: transform 0.2s;
+  animation:rotate 10s linear reverse infinite;
+}
+
+@keyframes rotate { 100% { transform:rotate(-360deg); } }
+
+@keyframes circlular{
+    0% { transform: scale(1) rotate(0deg) }
+    50% { transform: scale(1.5) rotate(180deg) };
+    100% { transform: scale(1) rotate(360deg) }
+  
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.cl{
+  background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(222,222,222,1) 45%, rgba(0,212,255,1) 100%);
+}
+.pl{
+  background: linear-gradient(160deg, rgba(181,181,181,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 20%, rgba(107,107,107,1) 50%, rgba(255,255,255,1) 69%, rgba(128,128,128,1) 100%, rgba(0,207,255,1) 100%);
+}
+
+.cb{
+  // transform: rotate(-45deg);
+  
+  // background: linear-gradient(to right, #fff 20%, #fff 40%, #ECD08C 50%, #ECD08C 55%, #fff 70%, #fff 100%);
+  background: linear-gradient(160deg, rgba(181,181,181,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 20%, rgba(107,107,107,1) 50%, rgba(255,255,255,1) 69%, rgba(128,128,128,1) 100%, rgba(0,207,255,1) 100%);
+  background-size: 200% auto;
+  
+  animation: shine 3s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+.noty_theme__mint{
+  border-radius: 50px !important;
+  padding: 5px !important;
+  text-align: center !important;
+  font-weight: 900 !important; 
+  width: auto !important;
+  box-shadow: 6px 6px 3px rgb(82, 82, 82) !important;
+}
+.noty_theme__mint:hover{
+  transform: scale(1);
+  transition: transform 0.2s;
+  animation: bounce 4s infinite; 
+}
+
+
+
+
+
+
+
+
+.expanded {
+  height: 64px; /* Set your desired height here */
+}
