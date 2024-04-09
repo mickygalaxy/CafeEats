@@ -1,8 +1,7 @@
 
-                                                       ![logo](https://drive.google.com/file/d/1PEGwPDCgtovin7DjIjejI1stWO8lb5k1/view?usp=sharing)
 
                                                        
-                                                       # Abstract
+                                                       ## Abstract
 
 In the dynamic landscape of modern dining, **CaféEats** stands out as a pioneering solution, revolutionizing the traditional café experience through a sophisticated online ordering platform. Led by a seasoned *Full Stack Developer* and *Project Lead*, **CaféEats** seamlessly integrates frontend and backend technologies, delivering a seamless, user-centric interface.
 
