@@ -1,4 +1,8 @@
-                                          # Abstract
+
+                                                       ![logo](https://github.com/mickygalaxy/CafeEats/assets/74487708/ac0cca43-0ec9-4c89-b6dc-9e0a2349d082)
+
+                                                       
+                                                       # Abstract
 
 In the dynamic landscape of modern dining, **CaféEats** stands out as a pioneering solution, revolutionizing the traditional café experience through a sophisticated online ordering platform. Led by a seasoned *Full Stack Developer* and *Project Lead*, **CaféEats** seamlessly integrates frontend and backend technologies, delivering a seamless, user-centric interface.
 
