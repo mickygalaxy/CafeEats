@@ -16,7 +16,7 @@ Responsive Design: Built with HTML, Tailwind CSS, and EJS, CaféEats offers a re
 
 Frontend: HTML, Tailwind CSS, EJS
 
-Backend: Node.js, Express.js, MongoDB (with Mongoose)
+Backend: Node.js, Express.js, MongoDB (with Mongoose) 
 
 Real-time Communication: Socket.IO
 
